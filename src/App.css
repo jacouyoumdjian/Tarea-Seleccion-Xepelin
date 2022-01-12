@@ -63,11 +63,20 @@ div.view-title-container {
 }
 
 .content-container {
-  text-align: center;
+  position: relative;
+}
+
+.cards-container {
   position: relative;
 }
 
 .gsheet-container {
   width: 100vh;
   height: 70vh;
+}
+
+.card {
+  position: relative;
+  width: 103vh;
+  left: 20%;
 }
