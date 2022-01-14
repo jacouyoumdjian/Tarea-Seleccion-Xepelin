@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Login, Gsheet, Edit } from './components';
+import { Login, Home, Edit } from './components';
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
           <br/>
           <Routes>
             <Route path='/' element={<Login />} />
-            <Route path='/gsheet' element={<Gsheet />} />
+            <Route path='/home' element={<Home />} />
             <Route path='/edit/:rowIndex' element={<Edit />} />
           </Routes>
           <br/>

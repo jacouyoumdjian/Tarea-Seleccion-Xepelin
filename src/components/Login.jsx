@@ -12,7 +12,7 @@ class Login extends Component {
                 <br /><br />
                 <br /><br />
                 <button type="button" class="btn btn-secondary btn-lg">
-                    <Link className="link" to="/gsheet">Ir a GSheet</Link>
+                    <Link className="link" to="/home">Ir a GSheet</Link>
                 </button>
             </div>
         );
