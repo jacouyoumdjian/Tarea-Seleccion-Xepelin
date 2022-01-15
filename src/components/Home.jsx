@@ -4,6 +4,7 @@ import '../App.css';
 
 const Home = () => {
     const [data, setData] = useState();
+
     // const getData = async () => {
     //     try {
     //         const resp = await fetch(

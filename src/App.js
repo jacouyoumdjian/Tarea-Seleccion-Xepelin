@@ -1,15 +1,11 @@
-import React, { useState, useContext, createContext } from 'react';
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Login, Home, Edit, Dashboard, Preferences, useToken } from './components';
 import { 
   BrowserRouter, 
   Routes,
-  Route, 
-  Link,
-  useNavigate,
-  useLocation, 
-  Navigate} from "react-router-dom";
+  Route } from "react-router-dom";
 
 const App = () => {
   const { token, setToken } = useToken();
@@ -62,10 +58,6 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/edit/:rowIndex' element={<Edit />} />
           </Routes>
-          {/* <Routes>
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/preferences' element={<Preferences />} />
-          </Routes> */}
         </div>
     </div>
     </BrowserRouter>

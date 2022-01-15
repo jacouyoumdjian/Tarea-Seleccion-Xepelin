@@ -52,21 +52,9 @@ const Edit = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // const resp = await fetch(
-            //     `https://sheet.best/api/sheets/01308f80-15f5-4e4b-a97f-97ad35847e84/${rowIndex}`,
-            //     {
-            //         method: "PUT",
-            //         headers: {
-            //             "Content-Type": "application/json",
-            //         },
-            //         body: JSON.stringify(data),
-            //     }
-            // );
             const respGsheet = await sendChangesGsheet(data, rowIndex);
-            // const respXepelin = await sendChangesXepelin(data);
-            if (respGsheet.ok) {
-                navigate('/');
-              }
+            const respXepelin = await sendChangesXepelin(data);
+            navigate('/');
         } catch (error) {
             console.log(error);
         }
