@@ -52,6 +52,8 @@ export default function Login({ setToken }) {
                     </div>
                 </form>
             </div>
+            <br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
         </div>
     );
     

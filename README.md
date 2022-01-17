@@ -42,7 +42,7 @@ Para la siguiente tarea se utilizaron los lenguajes HTML, CSS y JavaScript. Adem
 ## 4) Decisiones de Diseño y Modelación
 
 - Para el login de la aplicación se utilizó un sistema de autenticación basado en tokens, los que se almacenan en el localStorage del navegador.
-- Para la conexión de la aplicación con la hoja Google Sheet se utilizó la plataforma [sheet.best](https://sheet.best/), la que convierte las hojas de cálculo en REST APIs. Así, la aplicación le puede hacer consultas a la hoja de cálculo referenciada anteriormente para obtener la información contenida y editarla.
+- Para la conexión de la aplicación con la hoja Google Sheet se utilizó la plataforma [sheet.best](https://sheet.best/), la que convierte las hojas de cálculo en REST APIs. Así, la aplicación le puede hacer consultas a la hoja de cálculo referenciada anteriormente para obtener la información contenida y editarla. **Cabe destacar que la conexión de la hoja de cálculo se encuentra implementada en un plan que permite un número limitado de consultas, particular, un máximo de 250 consultas a la hoja de cálculo. Esto para que lo tenga en consideración a la hora de probar la aplicación**
 - La hoja de cálculo con la se trabaja cumple con la estructura de:
 
 ```
@@ -71,9 +71,11 @@ Luego, abra dos consolas al interior del repositorio navegando a las siguientes 
 
 Tal como se mencionó anteriormente, la tarea se modeló para ser implementada de manera local. Una vez ejecutados los comandos anteriores, se le presentará la vista del login. Ahí se le solicitará ingresar un nombre de usuario y una contraseña. Cabe destacar que no se le mostrará ninguna otra vista de la aplicación hasta que haya ingresado los parámetros anteriores.
 
-Luego, una vez loggeado, se le presentará una lista de facturas con sus tasas y un email asociado. Esta información corresponde a la presentada en la hoja de cálculo y se obtiene por medio de una consulta del tipo `GET`.
+Luego, una vez loggeado, se le presentará una lista de facturas con sus tasas y un email asociado. Esta información corresponde a la presentada en la hoja de cálculo y se obtiene por medio de una consulta del tipo `GET`. Cada una de las facturas tiene la opción de editar su tasa asociada. Para ello debe presionar el botón de editar correspondiente y se le redireccionará a la vista para editar.
 
-La aplicación le entrega la opción de editar una tasa de las disponibles en la hoja de cálculo. Para ello debe presionar
+En la vista de edición de tasa, se le solicitará ingresar un nuevo valor para la tasa que desea editar. Una vez ingresado el nuevo valor, presione el botón de editar, y esto gatillará dos acciones. Primero, se le redireccionará a la vista donde están todas las otras facturas y en particular, podrá apreciar que el valor de la tasa de la factura escogida ha cambiado por el nuevo valor. Consistentemente este cambio también se ve reflejado en la hoja de cálculo. Segundo, al presionar el botón de editar se gatilla una consulta del tipo `POST` a https://hooks.zapier.com/hooks/catch/6872019/oahrt5g/ para enviar un correo al email correspondiente a la factura editada, informando el cambio de tasas.
+
+hol
 
 ## 6) Referencias:
 

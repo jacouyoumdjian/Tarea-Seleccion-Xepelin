@@ -11,7 +11,7 @@ async function sendChangesXepelin(newData) {
 
 async function sendChangesGsheet(newData, rowIndex) {
     return fetch(
-        `https://sheet.best/api/sheets/01308f80-15f5-4e4b-a97f-97ad35847e84/${rowIndex}`,
+        `https://sheet.best/api/sheets/6f0828a2-80e4-4098-8d5b-1498e767b32e/${rowIndex}`,
         {
             method: "PUT",
             headers: {
@@ -31,21 +31,21 @@ const Edit = () => {
         email: "",
     });
 
-    // const getData = async () => {
-    //     try {
-    //       const resp = await fetch(
-    //         `https://sheet.best/api/sheets/01308f80-15f5-4e4b-a97f-97ad35847e84/${rowIndex}`
-    //       );
-    //       const data = await resp.json();
-    //       setData(data[0]);
-    //     } catch (error) {
-    //       console.log(error);
-    //     }
-    //   };
+    const getData = async () => {
+        try {
+          const resp = await fetch(
+            `https://sheet.best/api/sheets/6f0828a2-80e4-4098-8d5b-1498e767b32e/${rowIndex}`
+          );
+          const data = await resp.json();
+          setData(data[0]);
+        } catch (error) {
+          console.log(error);
+        }
+      };
     
-    //   useEffect(() => {
-    //     getData();
-    //   }, []);
+      useEffect(() => {
+        getData();
+      }, []);
 
     const handleChange = (e) => setData({...data, [e.target.name]: e.target.value });
 
@@ -77,6 +77,8 @@ const Edit = () => {
                     <button type="submit" class="btn btn-primary btn-lg">Editar tasa</button>
                 </form>
             </div>
+            <br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
         </div>
     );
     

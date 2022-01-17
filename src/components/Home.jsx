@@ -5,24 +5,24 @@ import '../App.css';
 const Home = () => {
     const [data, setData] = useState();
 
-    // const getData = async () => {
-    //     try {
-    //         const resp = await fetch(
-    //             "https://sheet.best/api/sheets/01308f80-15f5-4e4b-a97f-97ad35847e84"
-    //         );
-    //         const data = await resp.json();
-    //         setData(data);
-    //         console.log(data[0].idOp)
+    const getData = async () => {
+        try {
+            const resp = await fetch(
+                "https://sheet.best/api/sheets/6f0828a2-80e4-4098-8d5b-1498e767b32e"
+            );
+            const data = await resp.json();
+            setData(data);
+            console.log(data[0].idOp)
 
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
+        } catch (error) {
+            console.log(error)
+        }
 
-    // }
+    }
 
-    // useEffect(() => {
-    //     getData();
-    // }, []);
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <div className="content-container">

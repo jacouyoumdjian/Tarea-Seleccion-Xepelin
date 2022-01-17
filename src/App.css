@@ -5,6 +5,7 @@
   background-color: #c9eae8;
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 
 .view-content {
@@ -25,7 +26,6 @@
 
 .content-container {
   position: relative;
-  height: 100vh;
 }
 
 .title-text {
