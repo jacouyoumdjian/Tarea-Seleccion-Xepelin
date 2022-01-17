@@ -64,7 +64,7 @@ Para ejecutar la aplicación en primer lugar se requiere descargar el repositori
 
 Luego, abra dos consolas al interior del repositorio navegando a las siguientes rutas, y ejecute los comandos que se presentan a continuación en cada una:
 
-- _Consola 1_: `ruta\local\Tarea-Seleccion-Xepelin\` -> Ejecutar: `npm start`.
+- _Consola 1_: `ruta\local\Tarea-Seleccion-Xepelin\` -> Ejecutar: `npm install` y luego `npm start`.
 - _Consola 2_: `ruta\local\Tarea-Seleccion-Xepelin\backend\` -> Ejecutar: `node server.js`.
 
 ### 5.2) Caso de uso y Alcances
