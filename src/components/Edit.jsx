@@ -74,7 +74,6 @@ const Edit = () => {
                         value={data.tasa} 
                         onChange={handleChange} />
                     </div>
-                    <br />
                     <button type="submit" class="btn btn-primary btn-lg">Editar tasa</button>
                 </form>
             </div>

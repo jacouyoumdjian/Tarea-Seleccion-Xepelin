@@ -29,22 +29,24 @@ export default function Login({ setToken }) {
     return (
         <div className="content-container">
             <div className='login-container'>
+                <h1>Login</h1>
                 <form onSubmit={handleSubmit}>
                     <div class="mb-3">
                         <label className='normal-text'>Usuario</label>
                         <input
                         className="form-control"
+                        name="user"
+                        placeholder="Ingrese un valor para usuario ..."
                         onChange={e => setUserName(e.target.value)} />
                     </div>
-                    <br />
                     <div class="mb-3">
                         <label for="exampleInputPassword1" className='normal-text'>Contraseña</label>
                         <input type="password" 
                         className="form-control" 
-                        id="exampleInputPassword1"
+                        name="password"
+                        placeholder="Ingrese un valor para contraseña ..."
                         onChange={e => setPassword(e.target.value)} />
-                    </div> 
-                    <br />
+                    </div>
                     <div className='login-btn'>
                         <button type="submit" class="btn btn-primary btn-lg">Ingresar</button>
                     </div>

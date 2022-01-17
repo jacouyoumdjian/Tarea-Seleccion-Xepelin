@@ -1,16 +1,7 @@
 /* STYLE TAREA */
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
 .body-container {
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  position: absolute;
   background-color: #c9eae8;
   height: 100%;
   width: 100%;
@@ -34,6 +25,7 @@ body {
 
 .content-container {
   position: relative;
+  height: 100vh;
 }
 
 .title-text {
@@ -47,14 +39,13 @@ body {
 }
 
 /*LOGIN VIEW*/
-
 .login-container {
-  height: 40vh;
-  width: 50vh;
+  height: 43vh;
+  width: 70vh;
   background-color: #eaeded;
   position: relative;
   margin: auto;
-  padding: 6vh 2vh 2vh 2vh;
+  padding: 2vh 5vh 2vh 5vh;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -64,7 +55,6 @@ body {
 }
 
 /*GOOGLE SHEET VIEW*/
-
 .cards-container {
   position: relative;
 }
