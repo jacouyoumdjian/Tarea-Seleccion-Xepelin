@@ -1,11 +1,8 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Login, Home, Edit, Dashboard, Preferences, useToken } from './components';
-import { 
-  BrowserRouter, 
-  Routes,
-  Route } from "react-router-dom";
+import { Title, Login, Home, Edit, useToken } from './components';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   const { token, setToken } = useToken();
@@ -14,21 +11,7 @@ const App = () => {
     return (
       <div className='body-container'>
         <div className='view-content'>
-          <div className='view-title-container'>
-              <br />
-              <h1 className='title-text'>
-              Tarea de Selección
-              <br />
-              Product Engineer - Xepelin
-              </h1>
-              <br />
-              <p className='normal-text'>
-                  Bienvenidos a la Tarea de Selección
-                  <br />
-                  Autor: Joaquín Couyoumdjian | @jacouyoumdjian
-              </p>
-              <br /><br />
-          </div>
+          <Title />
           <Login setToken={setToken} />
         </div>
     </div>
@@ -39,21 +22,7 @@ const App = () => {
     <BrowserRouter>
       <div className='body-container'>
         <div className='view-content'>
-          <div className='view-title-container'>
-              <br />
-              <h1 className='title-text'>
-              Tarea de Selección
-              <br />
-              Product Engineer - Xepelin
-              </h1>
-              <br />
-              <p className='normal-text'>
-                  Bienvenidos a la Tarea de Selección
-                  <br />
-                  Autor: Joaquín Couyoumdjian | @jacouyoumdjian
-              </p>
-              <br /><br />
-          </div>
+          <Title />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/edit/:rowIndex' element={<Edit />} />
